@@ -1,0 +1,16 @@
+import React from 'react'
+import Form from '../../component/Form/Form'
+
+function EditForm() {
+  return (
+    <div className="flex items-center justify-center min-h-screen bg-gray-100">
+      <div className="bg-white p-8 rounded-lg shadow-lg max-w-2xl w-full">
+        <h2 className="text-2xl font-bold mb-6">Create Application</h2>
+        <Form />
+      </div>
+    </div>
+
+  )
+}
+
+export default EditForm
