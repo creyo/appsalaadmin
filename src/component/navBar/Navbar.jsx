@@ -1,10 +1,12 @@
 import React from 'react'
 import logo from "../../assets/logo.ico"
 import { Link } from "react-router-dom"
+import useLogOut from '../../hooks/useLogOut'
 
 function Navbar({searchInput}) {
 
-   
+   const {loading, logout} = useLogOut()
+
    const  handleSearchInput=(e)=>{
     searchInput(e.target.value)
    }
@@ -42,7 +44,7 @@ function Navbar({searchInput}) {
                                 </a>
                             </li>
                             <li><a>Settings</a></li>
-                            <li><a>Logout</a></li>
+                        <button onClick={logout}><li><a>Logout</a></li></button>    
                         </ul>
                     </div>
                 </div>
